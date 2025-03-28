@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- Bootstrap JavaScript (with Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        header{
+            height: 60px;
+            background-color: rgb(35, 34, 34);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+        }
+        header div{
+           
+        }
+        .header-left{
+            display: flex;
+            color: white;
+            justify-content: space-between;
+        }
+        .HLL{
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .HLR{
+            margin-left: 10px;
+        }
+        .HLR-T{
+            font-size: 12px;
+            padding-left: 18px;
+        }
+        .HM-T{
+            font-size: 12px;
+        }
+       
+.header-right{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 14px;
+  
+    width: 400px;
+    align-items: center;
+}
+.header-right div{
+ 
+}
+.bi-cart{
+    font-size: 40px;
+}
+.HR-T{
+    font-size: 12px;
+}
+.container-fluid{
+    padding: 0px;
+}
+nav{
+    height: 40px;
+    background-color: rgb(29, 44, 54);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.bi-justify{
+    font-size: 26px;
+}
+.all{
+    font-size: 15px;
+  position: relative;
+  top: -4px;
+}
+
+.bi-chevron-right{
+    font-size: 14px;
+}
+section {
+    position: absolute; 
+    top: 400px; 
+    left: 0;
+    right: 0;
+    height: 400px;
+    z-index: 1; 
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+width: 95%;
+margin: auto;
+gap: 20px;
+}
+section div{
+
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon,.bi-arrow-left-circle-fill,.bi-arrow-right-circle-fill{
+   position: absolute;
+   top: 140px;
+   font-size: 60px;
+   color: black;
+}
+.img-name{
+    font-size: 12px;
+
+}
+.row{
+    height: 160px;
+}
+.card-body{
+    height: 320px;
+}
+.HLR{
+    cursor: pointer;
+   
+
+}
+
+.HLR button:hover{
+    border: 1px solid white;
+    background-color: transparent;
+}
+.MB-P{
+    font-size: 14px;
+
+}
+.MB-B{
+    width: 80%;
+  
+}
+.modal-body{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.row-4{
+    height: 100%;
+}
+.row-1,.row-2,.row-3,.row-4{
+    margin-top: 10px;
+    text-align: center ;
+}
+
+.carousel-indicators{
+   
+    position: absolute;
+    top: 255px;
+    height:fit-content ;
+}
+.carousel-indicators button{
+   height: 14px !important;
+   width: 14px!important;
+   border-radius: 50% !important;
+   margin-left: 10px !important;
+   margin-right: 10px !important;
+  
+}
+    </style>
+</head>
+<body class="container-fluid">
+  <header>
+<div class="header-left">
+    <div class="HLL"><img src="public/images/amz.png" alt="" width="110px" height="30px"></div>
+    <div class="HLR">
+        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#location">
+        <div><span class="HLR-T">Dilivering to Pune 411001</span></div>
+        <div><span class="bi bi-geo-alt-fill"></span><span class="fw-bold  ">Update Location</span></div>
+    </button>
+    </div>
+</div>
+<div class="header-mid">
+
+ <div class="input-group">
+    <button class="input-group-text HM-T">All </button>
+    <input type="text" class="form-control" placeholder="Search Amazon.in" size="70">
+    <button class="input-group-text bi bi-search btn btn-warning"></button>
+ </div>
+
+</div>
+<div class="header-right">
+    <div><img src="public/images/ind.png" alt="" width="24px"><span class="fw-bold ps-2">EN</span></div>
+    <div>
+        <div class="HR-T"><span>Hello sign in</span></div>
+        <div><span class="fw-bold">Account & Lists</span></div>
+    </div>
+    <div>
+        <div class="HR-T"><span>Returns</span></div>
+        <div><span class="fw-bold"> & Orders</span></div>
+    </div>
+    <div>
+        <span class="bi bi-cart "></span><span class="fw-bold">cart</span>
+    </div>
+</div>
+  </header>
+  <nav>
+       <div><button class="btn bi bi-justify text-light "data-bs-toggle="offcanvas" data-bs-target="#canvas"><span class="all fw-bold ps-1">All</span></button></div>
+       <div><span>Fresh</span></div>
+       <div><span>Amazon miniTV</span></div>
+       <div><span>Sell</span></div>
+       <div><span>Best Sellers</span></div>
+       <div><span>Today's Deals</span></div>
+       <div><span>Mobile</span></div>
+       <div><span>Customer Service</span></div>
+       <div><span>Prime</span></div>
+       <div><span>Electronics</span></div>
+       <div><span>Fashion</span></div>
+       <div><span>New Releases</span></div>
+       <div><span>Home & Kitchen</span></div>
+       <div><span>Amazon Pay</span></div>
+       <div><span>Computers</span></div>
+       <div><span>Car & Motorbikes</span></div>
+       <div><span>Books</span></div>
+  </nav>
+
+    <div class="offcanvas offcanvas-start " id="canvas">
+ <div class="offcanvas-header bg-dark text-light">
+      <span class="bi bi-person-fill fs-3 me-3"></span>
+      <span class="fw-bold fs-4">Hello, Sign in</span>
+      <button class="btn btn-close "data-bs-dismiss="offcanvas"></button>
+ </div>
+ <div class="offcanvas-body">
+    <div class=" ">
+           
+        <ul>
+          <span class="fw-bold fs-5">Trendings </span>
+          <li class="d-flex pt-3" > <div><span>Best Sellers</span></div>
+          </li>
+          <li class="d-flex pt-3" > <div><span>New Releases</span></div>
+          </li>
+          <li class="d-flex pt-3" > <div><span>Movers & Shakers</span></div>
+          </li>
+        </ul>
+  
+  <hr>
+</div>
+    <div class=" ">
+           
+          <ul>
+            <span class="fw-bold fs-5">Digital Content and Devices </span>
+            <li class="d-flex justify-content-between pt-3">
+               <div> Amazon MiniTV- FREE entertainment</div> <div><span class="bi bi-chevron-right"></span></div>
+            </li>
+            <li class="d-flex justify-content-between pt-3">
+               <div> Echo & Alexa</div> <div><span class="bi bi-chevron-right"></span></div>
+            </li>
+            <li class="d-flex justify-content-between pt-3">
+               <div> Fire TV</div> <div><span class="bi bi-chevron-right"></span></div>
+            </li>
+            <li class="d-flex justify-content-between pt-3">
+               <div> Kindle E-Readers & eBooks</div> <div><span class="bi bi-chevron-right"></span></div>
+            </li>
+            <li class="d-flex justify-content-between pt-3">
+               <div> Audible & Audioble Books</div> <div><span class="bi bi-chevron-right"></span></div>
+            </li>
+            <li class="d-flex justify-content-between pt-3">
+               <div> Amazon Prime Video</div> <div><span class="bi bi-chevron-right"></span></div>
+            </li>
+            <li class="d-flex justify-content-between pt-3">
+               <div> Amazon Prime Music</div> <div><span class="bi bi-chevron-right"></span></div>
+            </li>
+          </ul>
+
+   
+</div>
+<hr>
+<div class=" ">
+           
+    <ul>
+      <span class="fw-bold fs-5">Shop by Category </span>
+      <li class="d-flex justify-content-between pt-3">
+         <div>Mobiles, Computers </div> <div><span class="bi bi-chevron-right"></span></div>
+      </li>
+      </ul>
+      </div>
+ </div>
+    </div>
+
+  
+        
+        <div class="carousel slide"data-bs-ride="carousel" id="banners" data-bs-theme="dark" data-bs-pause="false">
+
+
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active"data-bs-interval="3000">
+
+                   <img src="public/images/amazon-bg.jpg " alt=""class="w-100 d-block">
+
+                </div>
+                <div class="carousel-item "data-bs-interval="3000">
+
+                   <img src="public/images/amz-bg-2.jpg " alt=""class="w-100 d-block">
+
+                </div>
+                <div class="carousel-item "data-bs-interval="3000">
+
+                   <img src="public/images/amz-bg-3.jpg " alt=""class="w-100 d-block">
+
+                </div>
+            </div>
+         
+             <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+                <span class="bi bi-arrow-left-circle-fill"></span>
+             </button>
+             <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+                <span class="bi bi-arrow-right-circle-fill"></span>
+             </button>
+
+             <div class="carousel-indicators ">
+
+                <button data-bs-slide-to="0" data-bs-target="#banners "class="active" ></button>
+                <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="2" data-bs-target="#banners" ></button>
+             </div>
+           
+        </div>
+
+       
+        <section>
+
+             <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span class="fw-bold fs-5" >Revamp your home in style</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                   <div class="row ">
+                   <div class="col ">
+                     <img src="public/images/a2.jpg" alt=""width="100%"height="70%">
+                     <span class="img-name">Cushion covers, bedsheets & more</span>
+                   </div>
+                   <div class="col">
+                    <img src="public/images/a3.jpg" alt="" width="100%"height="70%">
+                    <span class="img-name">
+                        Figurines, vases & more</span>
+                   </div>
+                   </div>
+                   <div class="row ">
+                    <div class="col ">
+                        <img src="public/images/a4.jpg" alt=""width="100%"height="70%">
+                        <span class="img-name">Home storage</span>
+                      </div>
+                      <div class="col">
+                       <img src="public/images/a5.jpg" alt="" width="100%"height="70%">
+                       <span class="img-name">
+                        Lighting solutions</span>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-footer">
+                    <span class="img-name text-primary">see all offers</span>
+                </div>
+             </div>
+             <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span class="fw-bold fs-5" >Appliances for your home | Up to 55% off</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                   <div class="row ">
+                   <div class="col ">
+                     <img src="public/images/a6.jpg" alt=""width="100%"height="70%">
+                     <span class="img-name">
+                        Air conditioners</span>
+                   </div>
+                   <div class="col">
+                    <img src="public/images/a7.jpg" alt="" width="100%"height="70%">
+                    <span class="img-name">
+  
+Refrigerators</span>
+                   </div>
+                   </div>
+                   <div class="row ">
+                    <div class="col ">
+                        <img src="public/images/a8.jpg" alt=""width="100%"height="70%">
+                        <span class="img-name">Microwaves
+                           
+                            </span>
+                      </div>
+                      <div class="col">
+                       <img src="public/images/a9.jpg" alt="" width="100%"height="70%">
+                       <span class="img-name">
+                        Washing machines</span>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-footer">
+                    <span class="img-name text-primary">see all offers</span>
+                </div>
+             </div>
+             <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span class="fw-bold fs-5" >Starting ₹149 | Headphones</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                   <div class="row ">
+                   <div class="col ">
+                     <img src="public/images/a10.jpg" alt=""width="100%"height="70%">
+                     <span class="img-name">
+                        Starting ₹249 | boAt</span>
+                   </div>
+                   <div class="col">
+                    <img src="public/images/a11.jpg" alt="" width="100%"height="70%">
+                    <span class="img-name">
+                        Starting ₹249 | boAt</span>
+                   </div>
+                   </div>
+                   <div class="row ">
+                    <div class="col ">
+                        <img src="public/images/a12.jpg" alt=""width="100%"height="70%">
+                        <span class="img-name"> Starting ₹249 | boAt</span>
+                      </div>
+                      <div class="col">
+                       <img src="public/images/a13.jpg" alt="" width="100%"height="70%">
+                       <span class="img-name">
+                        Starting ₹249 | boAt</span>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-footer">
+                    <span class="img-name text-primary">see all offers</span>
+                </div>
+             </div>
+             <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span class="fw-bold fs-5" >Automotive essentials | Up to 60% off</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                   <div class="row ">
+                   <div class="col ">
+                     <img src="public/images/a13.jpg" alt=""width="100%"height="70%">
+                     <span class="img-name"> Starting ₹249 | boAt</span>
+                   </div>
+                   <div class="col">
+                    <img src="public/images/a1.jpg" alt="" width="100%"height="70%">
+                    <span class="img-name"> Amazon Best Offers
+                        </span>
+                   </div>
+                   </div>
+                   <div class="row ">
+                    <div class="col ">
+                        <img src="public/images/a13.jpg" alt=""width="100%"height="70%">
+                        <span class="img-name">Starting ₹249 | boAt</span>
+                      </div>
+                      <div class="col">
+                       <img src="public/images/a6.jpg" alt="" width="100%"height="70%">
+                       <span class="img-name">
+                        Air Conditioners</span>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-footer">
+                    <span class="img-name text-primary">see all offers</span>
+                </div>
+             </div>
+        </section>
+
+        <div class="modal fade" id="location" >
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+             <div class="modal-header">
+                <span class="fw-bold">Choose Your Location</span>
+                <button class="btn btn-close"  data-bs-dismiss="modal"></button>
+             </div>
+             <div class="modal-body d-flex">
+               <div class="row-1"><p class="MB-P">Select a delivery location to see product availability and delivery options</p></div>
+               <div class="row-2  w-100 "><button class="btn btn-warning MB-B ">Sign in to see you address</button></div>
+               <div class="row-3"><span>or enter an Indian pincode</span></div>
+             
+               <div class="row-4  ">
+ 
+                 <div class="grid  d-flex justify-content-between" >
+                    <div class="">
+                        <input type="text" class="form-control border border-dark"size="26">
+                    </div>
+                    <div class="">
+                        <button class="btn px-4 border border-dark ms-4 rounded rounded-4">Apply</button> 
+                    </div>
+                 </div>
+               </div>
+              
+             </div>
+
+
+            </div>
+            </div>
+        </div>
+       
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JavaScript (with Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+        body{
+            background-image: url("public/images/github-bg-2.webp");
+            background-repeat: no-repeat;
+        
+            background-size: cover;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           margin: 0px;
+        }
+        .shade{
+            height: 100vh;
+          
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            overflow: auto;
+        }
+        .offer{
+            padding: 12px;
+            text-align: center;
+            background-color: rgb(48, 54, 61);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+        .bi-x{
+            float: right;
+            padding-right: 10px;
+          
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 24px;
+          
+            
+        }
+        .header-left,.header-right{
+          
+            
+        }
+        
+       .items{
+        padding-left: 10px;
+       }
+        .header-search{
+            background-color: rgb(39, 48, 64);
+            border: 1px solid rgb(164, 162, 162);
+            height: 30px;
+            padding-left: 10px;
+            border-radius: 8px;
+        }
+        ::placeholder{
+            color: rgb(184, 184, 184);
+        }
+      
+        .bi-github{
+            font-size: 34px;
+        }
+     
+        
+        .signup-btn{
+ border: 1px solid white;
+ height: fit-content;
+ padding: 4px;
+ padding-left: 8px;
+ padding-right:8px ;
+ margin-left: 10px;
+ border-radius: 4px;
+
+        }
+        section {
+            display: grid;
+           
+            height: 100vh;
+            grid-template-columns: 2fr 10fr;
+        }
+        .left-panel,.right-panel{
+           
+        }
+        .right-panel{
+            padding-top: 30px;
+        }
+        .heading-1{
+            font-size: 60px;
+           
+            padding: 0px;
+            height: 180px;
+            padding-left: 30px;
+            
+        }
+        .heading-2{
+            font-size: 24px;
+            padding-left: 30px;
+            color:rgb(141, 150, 160);
+            margin-top: -80px;
+        }
+        form{
+            padding-left: 30px;
+            padding-top: 50px;
+        }
+        .email{
+            height: 40px;
+            width: 240px;
+            border: none;
+            padding-left: 10px;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+        .btn-signup{
+            height: 42px;
+            border: none;
+            width: 170px;
+            background-color: rgb(118, 62, 198);
+            color: white;
+            font-weight: bold;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+        .email-label{
+            padding-bottom: 10px;
+        }
+        .btn-enter{
+            height: 42px;
+            margin-left: 20px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgb(118, 62, 198);
+            font-weight: bold;
+            border-radius: 6px;
+        }
+        .company-heading{
+            margin-top: 90px;
+            padding-left: 30px;
+            font-size: 22px;
+            color:rgb(141, 150, 160);
+        }
+        .bi-arrow-down-right-circle-fill{
+            padding-left: 10px;
+        }
+        .company-logo{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            height: 100px;
+         
+            width: 90%;
+            margin-top: 26px;
+        }
+        .company-logo div{
+            display: flex;
+          
+            justify-content: center;
+            align-items: center;
+        }
+        .company-logo div img{
+            filter: grayscale(100%);
+        }
+        .product-container{
+            margin-top: 30px;
+            padding-left: 30px;
+
+        }
+        .product{
+            font-size: 28px;
+         
+           
+                   }
+                   .product-div{
+                    padding-bottom: 20px;
+                   }
+                   .highlight{
+                    font-size: 46px;
+                    color: rgb(63, 185, 80)
+                   }
+                   .product-para{
+                    font-size: 40px;
+                    font-weight: 500;
+                   }
+                   fieldset {
+ 
+ border-left: none;
+ border-bottom: none;
+ border-right: none;
+ transform: rotate(90deg);
+}
+
+.code-plate-container{
+  
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    position: relative;
+   
+}
+   .code-img{
+    border: 1px solid rgb(81, 79, 79);
+    border-radius: 6px;
+width: 90%;
+height: 90%;
+position: absolute;
+z-index: 1;
+
+   }
+img{
+    border-radius: 6px;
+}
+.code-img-2{
+    position: relative;
+    z-index: 2;
+    width:27%;
+    height: 70%;
+    transform: translateX(400px);
+   margin-top: 400px;
+    box-shadow: 1px 1px 136px rgb(43, 17, 43);
+    border: 1px solid rgb(78, 77, 77);
+}
+.offer-con{
+   
+    width: 500px;
+    height: 300px;
+    margin-left: 250px;
+    font-size: 26px;
+margin-top: 40px;
+font-weight: 500;
+}
+.light{
+    color: rgb(138, 138, 138);
+}
+.exl{
+    margin-top: 30px;
+    color: rgb(191, 26, 191);
+}
+.btn-que{
+    font-size: 12px;
+    padding: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 1px solid rgb(63, 185, 80);
+    border-radius: 20px;
+    color: rgb(63, 185, 80);
+}
+.per{
+    color: rgb(63, 185, 80);
+ font-size: 80px;
+}
+.top{
+    margin-top: 20px;
+}
+.gitaction{
+
+    width: 90%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    margin: auto;
+    background-color: rgb(22, 27, 34);
+    border-radius: 30px;
+    border: 1px solid rgb(78, 77, 77);
+}
+
+.action-right{
+    text-align: end;
+    margin-top: 70px;
+   
+  
+}
+.action-right img{
+    box-shadow: 1px 1px 36px rgb(20, 20, 20);
+}
+.action-para{
+    width: 80%;
+    font-size: 26px;
+   margin: auto;
+   padding-top: 70px;
+   font-weight: 500;
+}
+.disc{
+    margin-top: 230px;
+    width: 70%;
+    font-size: 20px;
+   text-align: center;
+   font-weight: 500;
+}
+.codespace-con{
+ 
+    width: 99%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 6fr 6fr ;
+}
+.cspc-left,.cspc-right{
+   
+    margin: 20px;
+    border-radius: 30px;
+    background-color: rgb(22, 27, 34);
+    font-weight: 500;
+    border: 1px solid rgb(78, 77, 77);
+}
+.row-1{
+    font-size: 26px;
+    padding-top: 100px;
+    padding-left: 100px;
+  
+}
+.row-2{
+    padding-top: 40px;
+    padding-left: 100px;
+    font-size: 20px;
+}
+.row-3{
+    margin-top: 120px;
+    text-align: end;
+}
+.row-3 img{
+    border-radius: 30px;
+}
+.mid{
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="shade">
+
+      <article>
+        <div class="offer">
+            <span>Learn about the latest AI tools and skills devs need to succeed at GitHub Universe. </span>
+            <span class="underline">Get 20% off your tickets, only until September 3.</span>
+             <span class="bi bi-x"></span>
+        </div>
+      </article>
+      <header>
+        <div class="header-left">
+         
+                <span class="bi bi-github">
+
+                </span>
+                <span class="items">
+                   Product <span class="bi bi-chevron-down"></span>
+                </span>
+                <span  class="items"> Solutions <span class="bi bi-chevron-down"></span>
+                <span class="items"> Resources <span class="bi bi-chevron-down"></span></span>
+                <span class="items">  Open Source <span class="bi bi-chevron-down"></span></span>
+                <span class="items"> Enterprise <span class="bi bi-chevron-down"></span></span>
+                <span class="items">Pricing</span>
+         
+        </div>
+        <div class="header-right">
+          
+            <input  type="text" name="search"  size="35" class="header-search"placeholder="Search or jump to...">
+            <span class="items">Sign in</span>
+            <span class="signup-btn">Sign up</span>
+        </div>
+      </header>
+      <section>
+
+        <div class="left-panel">
+
+    <!-- <fieldset>
+        <legend ><span class="bi bi-chevron-left"></span><span class="bi bi-chevron-right"></span></legend>
+    </fieldset> -->
+
+
+        </div>
+        <div class="right-panel">
+            <div  class="heading-1"  >
+              <h1>Let’s build from here</h1>  
+            </div>
+           <div class="heading-2">
+            <h4>The world’s leading AI-powered developer platform.</h4>
+           </div>
+               
+
+
+           <form action="">
+            <div class="email-label">
+                <label for="email">Email address</label>
+            </div>
+            <input type="text"placeholder="you@company.com" class="email"name="email"><button class="btn-signup">Sign up for GitHub</button> <button class="btn-enter">Start a free enterprises trial <span class="bi bi-chevron-right"></span></button>
+           </form>
+
+           <div>
+            <div class="company-heading">
+<span>Trusted by the world’s leading organizations</span><span class="bi bi-arrow-down-right-circle-fill"></span>
+            </div>
+            <div class="company-logo">
+ <div><img src="public/images/3m.png" alt="" width="45%"></div>
+ <div><img src="public/images/kmpg.png" alt="" width="75%"></div>
+ <div><img src="public/images/merc.png" alt="" width="55%"></div>
+ <div><img src="public/images/sap.png" alt="" width="45%"></div>
+ <div><img src="public/images/p&g.png" alt="" width="45%"></div>
+ <div><img src="public/images/teltus.png" alt="" width="85%"></div>
+            </div>
+           </div>
+           <div class="product-container">
+
+           
+           <div class="product-div">
+            <span class="product">Productivity</span>
+                
+           </div>
+           <div class="product-para">
+            <span class="highlight">Accelerate innovation</span><br>
+            Our AI-powered platform increases the <br> pace of software development.
+           </div>
+        </div>
+    </div>
+
+    
+            
+      </section>
+    <div class="code-plate-container">
+        <div class="code-img">
+            <img src="public/images/gykk9qbe.png" alt=""width="100%" height="100%">
+        </div>
+        <div class="code-img-2">
+<img src="public/images/gh.png" alt="" width="100%"height="100%">
+        </div>
+    </div>
+
+    
+   <div class="offer-con">
+    <div><span>GitHub Copilot</span> <span class="light">empowers developers to complete tasks 55% faster with contextualized AI coding assistance across workflows.</span></div>
+    <div class="exl">
+        <span>Explore GitHub Copilot </span> <span class="bi bi-chevron-right"></span>
+    </div>
+   </div>
+   <div class="offer-con">
+    <div><span class="btn-que">Did you know?</span></div>
+    <div><span class="per">22% increase</span></div>
+    <div>
+        <span>in developer productivity after three years with GitHub </span> 
+    </div>
+    <div class="top"> <span>Read the report </span> <span class="bi bi-chevron-right"></span></div>
+   </div>
+
+   <div class="gitaction">
+
+     <div class="action-left">
+
+
+
+  <div class="action-para">
+
+    <span>GitHub Actions <span class="light"> automates your build, test, and deployment workflow with simple and secure CI/CD.</span></span>
+  </div>
+  <div class="disc">
+        <span>Discover GitHub Actions </span> <span class="bi bi-chevron-right"></span>
+  </div>
+
+     </div>
+     <div class="action-right">
+        <img src="public/images/vkkd8hhb.png" alt="" width="90%">
+     </div>
+   </div>
+
+   <div class="codespace-con">
+    <div class="cspc-left">
+         <div class="row-1"><span>GitHub Codespaces </span> <span class="light">offers a complete dev environment in seconds. Code, build, test, and open pull requests from any repo.</span></div>
+         <div class="row-2"><span>Check out GitHub Codespaces </span><span class="bi bi-chevron-right"></span></div>
+         <div class="row-3">
+            <img src="public/images/qtd0we6h.png" alt="" width="90%">
+         </div>
+    </div>
+    <div class="cspc-right">
+<div class="row-1">
+    <span>GitHub Mobile and Copilot</span><span class="light"> now let you manage projects and converse with your AI pair programmer on the go.</span>
+</div>
+<div class="row-2"><span>Download GitHub Mobile  </span><span class="bi bi-chevron-right"></span></div>
+<div class="row-3 mid"><img src="public/images/73urlizg.png" alt="" width="70%"> </div>
+    </div>
+   </div>
+    </div>
+  
+</body>
+</html>

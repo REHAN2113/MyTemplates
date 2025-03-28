@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earbuds</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- Bootstrap JavaScript (with Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+   @media screen and (min-width: 800px)   {
+   
+      header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 20px 0px 20px;
+      height: 80px;
+      width: 100%;
+      align-items: center;
+    
+
+    }
+    header div{
+        width: 100%;
+      
+    }
+ .heading-right{
+    text-align: center;
+ }
+    #bokeh {
+
+
+      height: 300px;
+      width: 300px;
+      border-radius: 20% 100% 40% 50%;
+      filter: blur(70px);
+      left: 30%;
+      transition: 1.3s;
+      position: absolute;
+      z-index: -10;
+      background-image: linear-gradient(0deg, rgb(237, 255, 255), rgb(181, 239, 232), rgb(217, 254, 255));
+    }
+
+    .heading-right span {
+      margin: 0px 8px 0px 8px;
+    }
+
+    .carousel {
+      font-family: Arial, Helvetica, sans-serif;
+ 
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      z-index: 100;
+      
+    }
+
+    .left-panel {
+
+      width: 35%;
+      height: 80%;
+
+    }
+
+    .right-panel {
+
+      width: 65%;
+      height: 80%;
+      position: relative;
+
+    }
+
+    .left-panel {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      position: relative;
+    }
+
+    .info-con {
+
+      position: absolute;
+      width: 70%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 30px;
+    }
+
+    .info-con div {
+      padding: 10px 0px 4px 0px;
+
+    }
+
+    .row-1 {
+      font-size: 22px;
+      animation-delay: 1s;
+
+    }
+
+    .row-2 {
+      font-size: 40px;
+      font-weight: 700;
+      animation-delay: 0.5s;
+    }
+
+    .row-3 {
+      font-size: 12px;
+      animation-delay: 1s;
+
+    }
+
+    .row-4 {
+      font-weight: bold;
+      animation-delay: 1.5s;
+      cursor: pointer;
+     border-radius: 30px;
+     background-image: linear-gradient(0deg, rgb(237, 255, 255), rgb(181, 239, 232), rgb(217, 254, 255));
+      width: 100px;
+      height: 50px;
+      margin-top: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+      
+
+    }
+
+    .right-panel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+    }
+
+    .images {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+
+    }
+
+    .images img {
+      width: 272px;
+      position: absolute;
+
+      transition: all 1s ease-in-out;
+    }
+
+    .first {
+      transform: translateX(-550px);
+      opacity: 0;
+      filter: blur(10px);
+
+    }
+
+    .second {
+      transform: translateX(0px) scale(1);
+      opacity: 1;
+      filter: blur(0px);
+
+
+    }
+
+    .third {
+      transform: translateX(300px) scale(0.8);
+      filter: blur(6px);
+      opacity: 1;
+
+    }
+
+    .fourth {
+      transform: translateX(550px) translateY(30px) scale(0.6);
+      filter: blur(8px);
+      opacity: 1;
+
+    }
+
+    .fifth {
+      transform: translateX(700px) scale(0.5) translateY(100px);
+      filter: blur(40px);
+      opacity: 1;
+
+
+    }
+
+    #hide-con {
+      height: 100%;
+      width: 80%;
+
+      position: absolute;
+      z-index: -10;
+      display: none;
+
+    }
+
+    .buttons div span {
+      border: 1px solid rgb(174, 174, 174);
+      display: block;
+      padding: 5px;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 50px;
+      font-weight: bold;
+    }
+
+    .buttons div span:hover {
+      background-color: aliceblue;
+      color: black;
+
+    }
+
+    #first-info,
+    #third-info,
+    #fourth-info,
+    #fifth-info {
+      display: none;
+    }
+
+    .row-1,
+    .row-2,
+    .row-3,
+    .row-4 ,.title-anim ,.info-anim,.feature-anim,.btn-anim ,#goback-btn ,.prev-btn,#next-btn {
+      animation: showCon 1s ease 0.6s forwards;
+      opacity: 0;
+
+    }
+    .title-anim{
+      animation-delay: 0.5s;
+    }
+    .info-anim{
+      animation-delay: 1s;
+    }
+    .feature-anim{
+      animation-delay: 1.5s;
+    }
+    .btn-anim{
+      animation-delay: 2s;
+    }
+  
+    
+    #goback-btn{
+      animation-delay: 2.1s;
+    }
+    
+
+ .third,.fourth,.fifth{
+  animation: fade 1.5s ease-in-out forwards;
+ }
+ @keyframes fade{
+  0%{
+    opacity: 0;
+  
+  }
+  100%{
+    opacity: 1;
+    
+  }
+ }
+
+    @keyframes showCon {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+        filter: blur(20px);
+      }
+
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+        filter: blur(0px);
+      }
+
+    }
+
+    #features-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      height: 100px;
+    
+
+    }
+
+    #features-grid div {
+font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .highlight{
+      transform: translateX(-300px) scale(1.5);
+      
+    }
+    }
+
+
+  </style>
+</head>
+
+<body class="container-fluid">
+  <header>
+    <div class="fw-bold fs-4">
+      <span>Earbuds.</span>
+    </div>
+    <div class="heading-right">
+      <span>
+        HOME
+      </span>
+      <span>CONTACT</span>
+      <span>INFO</span>
+    </div>
+  </header>
+
+  <div class="carousel">
+    <div id="bokeh"></div>
+    <div class="left-panel">
+      <div class="info-con " id="first-info">
+        <div class="row-1">DESIGN SLIDER</div>
+        <div class="row-2">Bose QuietComfort Earbuds II</div>
+        <div class="row-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in, quia laboriosam nemo
+          ducimus animi incidunt consequuntur nam minus, dolor sapiente aspernatur voluptatem esse quae accusantium
+          soluta necessitatibus praesentium maiores.</div>
+        <div class="row-4" onclick="first()">See more</div>
+      </div>
+      <div class="info-con " id="second-info">
+        <div class="row-1">DESIGN SLIDER</div>
+        <div class="row-2">Jabra Elite 85t</div>
+        <div class="row-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in, quia laboriosam nemo
+          ducimus animi incidunt consequuntur nam minus, dolor sapiente aspernatur voluptatem esse quae accusantium
+          soluta necessitatibus praesentium maiores.</div>
+        <div class="row-4" onclick="second()">See more</div>
+      </div>
+      <div class="info-con " id="third-info">
+        <div class="row-1">DESIGN SLIDER</div>
+        <div class="row-2">Apple AirPods Pro (2nd Gen)</div>
+        <div class="row-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in, quia laboriosam nemo
+          ducimus animi incidunt consequuntur nam minus, dolor sapiente aspernatur voluptatem esse quae accusantium
+          soluta necessitatibus praesentium maiores.</div>
+        <div class="row-4" onclick="third()">See more</div>
+      </div>
+      <div class="info-con " id="fourth-info">
+        <div class="row-1">DESIGN SLIDER</div>
+        <div class="row-2">Samsung Galaxy Buds 2 Pro</div>
+        <div class="row-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in, quia laboriosam nemo
+          ducimus animi incidunt consequuntur nam minus, dolor sapiente aspernatur voluptatem esse quae accusantium
+          soluta necessitatibus praesentium maiores.</div>
+        <div class="row-4" onclick="fourth()">See more</div>
+      </div>
+      <div class="info-con" id="fifth-info">
+        <div class="row-1">DESIGN SLIDER</div>
+        <div class="row-2">Sony WF-1000XM5</div>
+        <div class="row-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in, quia laboriosam nemo
+          ducimus animi incidunt consequuntur nam minus, dolor sapiente aspernatur voluptatem esse quae accusantium
+          soluta necessitatibus praesentium maiores.</div>
+        <div class="row-4" onclick="fifth()">See more</div>
+      </div>
+    </div>
+    <div class="right-panel">
+
+      <div id="hide-con" class="p-4 hide-con1 ">
+        <div class="fs-1 fw-bold text-center  title-anim" >
+          Bose QuietComfort Earbuds II
+        </div>
+        <div class="mt-3 pb-4 info-anim " style="border-bottom: 1px solid rgb(202, 202, 202);">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione natus aliquid eligendi, quae adipisci
+          delectus eius, tenetur porro quibusdam ab et ullam quisquam voluptatum minus dignissimos laborum mollitia
+          fugit molestiae.
+        </div>
+        <div id="features-grid" class="feature-anim">
+          <div class="fw-bold">USED TIME</div>
+          <div class="fw-bold small-text">CHARGING PORT</div>
+          <div class="fw-bold">COMPATIBLE</div>
+          <div class="fw-bold">BLUETOOTH</div>
+          <div class="fw-bold">CONTROLLED</div>
+          <div>6 Hours</div>
+          <div>Type-C</div>
+          <div>Android</div>
+          <div>5.3</div>
+          <div>Touch</div>
+        </div>
+        <div class="mt-4 text-end btn-anim">
+          <button class="btn btn-primary">Add to Cart</button>
+          <button class="btn btn-secondary">Checkout</button>
+        </div>
+      </div>
+      <div id="hide-con" class="p-4 hide-con2 " >
+        <div class="fs-1 fw-bold text-center title-anim">
+          Jabra Elite 85t
+        </div>
+        <div class="mt-3 pb-4 info-anim " style="border-bottom: 1px solid rgb(202, 202, 202);">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione natus aliquid eligendi, quae adipisci
+          delectus eius, tenetur porro quibusdam ab et ullam quisquam voluptatum minus dignissimos laborum mollitia
+          fugit molestiae.
+        </div>
+        <div id="features-grid" class="feature-anim ">
+          <div class="fw-bold">USED TIME</div>
+          <div class="fw-bold small-text">CHARGING PORT</div>
+          <div class="fw-bold">COMPATIBLE</div>
+          <div class="fw-bold">BLUETOOTH</div>
+          <div class="fw-bold">CONTROLLED</div>
+          <div>6 Hours</div>
+          <div>Type-C</div>
+          <div>Android</div>
+          <div>5.3</div>
+          <div>Touch</div>
+        </div>
+        <div class="mt-4 text-end btn-anim "  >
+          <button class="btn btn-primary">Add to Cart</button>
+          <button class="btn btn-secondary">Checkout</button>
+        </div>
+      </div>
+      <div id="hide-con" class="p-4 hide-con3">
+        <div class="fs-1 fw-bold text-center title-anim">
+          Apple AirPods Pro (2nd Gen)
+        </div>
+        <div class="mt-3 pb-4 info-anim " style="border-bottom: 1px solid rgb(202, 202, 202);">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione natus aliquid eligendi, quae adipisci
+          delectus eius, tenetur porro quibusdam ab et ullam quisquam voluptatum minus dignissimos laborum mollitia
+          fugit molestiae.
+        </div>
+        <div id="features-grid" class="feature-anim">
+          <div class="fw-bold">USED TIME</div>
+          <div class="fw-bold small-text">CHARGING PORT</div>
+          <div class="fw-bold">COMPATIBLE</div>
+          <div class="fw-bold">BLUETOOTH</div>
+          <div class="fw-bold">CONTROLLED</div>
+          <div>6 Hours</div>
+          <div>Type-C</div>
+          <div>Android</div>
+          <div>5.3</div>
+          <div>Touch</div>
+        </div>
+        <div class="mt-4 text-end btn-anim">
+          <button class="btn btn-primary">Add to Cart</button>
+          <button class="btn btn-secondary">Checkout</button>
+        </div>
+      </div>
+      <div id="hide-con" class="p-4 hide-con4">
+        <div class="fs-1 fw-bold text-center title-anim">
+          Samsung Galaxy Buds 2 Pro
+        </div>
+        <div class="mt-3 pb-4 info-anim " style="border-bottom: 1px solid rgb(202, 202, 202);">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione natus aliquid eligendi, quae adipisci
+          delectus eius, tenetur porro quibusdam ab et ullam quisquam voluptatum minus dignissimos laborum mollitia
+          fugit molestiae.
+        </div>
+        <div id="features-grid" class="feature-anim">
+          <div class="fw-bold">USED TIME</div>
+          <div class="fw-bold small-text">CHARGING PORT</div>
+          <div class="fw-bold">COMPATIBLE</div>
+          <div class="fw-bold">BLUETOOTH</div>
+          <div class="fw-bold">CONTROLLED</div>
+          <div>6 Hours</div>
+          <div>Type-C</div>
+          <div>Android</div>
+          <div>5.3</div>
+          <div>Touch</div>
+        </div>
+        <div class="mt-4 text-end btn-anim">
+          <button class="btn btn-primary">Add to Cart</button>
+          <button class="btn btn-secondary">Checkout</button>
+        </div>
+      </div>
+      <div id="hide-con" class="p-4 hide-con5">
+        <div class="fs-1 fw-bold text-center title-anim" >
+          Sony WF-1000XM5
+        </div>
+        <div class="mt-3 pb-4 info-anim" style="border-bottom: 1px solid rgb(202, 202, 202);">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione natus aliquid eligendi, quae adipisci
+          delectus eius, tenetur porro quibusdam ab et ullam quisquam voluptatum minus dignissimos laborum mollitia
+          fugit molestiae.
+        </div>
+        <div id="features-grid" class="feature-anim">
+          <div class="fw-bold ">USED TIME</div>
+          <div class="fw-bold small-text ">CHARGING PORT</div>
+          <div class="fw-bold">COMPATIBLE</div>
+          <div class="fw-bold">BLUETOOTH</div>
+          <div class="fw-bold">CONTROLLED</div>
+          <div>6 Hours</div>
+          <div>Type-C</div>
+          <div>Android</div>
+          <div>5.3</div>
+          <div>Touch</div>
+        </div>
+        <div class="mt-4 text-end btn-anim">
+          <button class="btn btn-primary">Add to Cart</button>
+          <button class="btn btn-secondary">Checkout</button>
+        </div>
+      </div>
+      
+      <div class="images" id="images-con">
+        <img src="public/images/earbud6.png" alt="" id="first" class="first img">
+        <img src="public/images/earbud3.png" alt="" id="second" class="second img">
+        <img src="public/images/earbud2.png" alt="" id="third" class="third img">
+        <img src="public/images/earbud4.png" alt="" id="fourth" class="fourth img">
+        <img src="public/images/earbud5.png" alt="" id="fifth" class="fifth img">
+      </div>
+    </div>
+
+  </div>
+
+
+  </div>
+  <div class="buttons d-flex justify-content-around">
+    <div id="prev-btn"> <span onclick="prev()">
+        < </span>
+    </div>
+    <div ><span style="width: 100px; display: none;" id="goback-btn" onclick="goback()">Go Back</span></div>
+    <div id="next-btn"> <span onclick="next()">></span></div>
+  </div>
+
+  <script>
+
+    function next() {
+      var first = document.getElementById("first");
+      var second = document.getElementById("second");
+      var third = document.getElementById("third");
+      var fourth = document.getElementById("fourth");
+      var fifth = document.getElementById("fifth");
+
+      if (first.classList.contains("first")) {
+        first.classList.remove("first");
+        first.classList.add("fifth");
+      }
+      else if (first.classList.contains("fifth")) {
+        first.classList.remove("fifth");
+        first.classList.add("fourth");
+      }
+      else if (first.classList.contains("fourth")) {
+        first.classList.remove("fourth");
+        first.classList.add("third");
+      }
+      else if (first.classList.contains("third")) {
+        first.classList.remove("third");
+        first.classList.add("second");
+
+        document.getElementById("first-info").style.display = "block";
+        document.getElementById("second-info").style.display = "none";
+        document.getElementById("third-info").style.display = "none";
+        document.getElementById("fourth-info").style.display = "none";
+        document.getElementById("fifth-info").style.display = "none";
+      }
+      else if (first.classList.contains("second")) {
+        first.classList.remove("second");
+        first.classList.add("first");
+      }
+
+
+      if (second.classList.contains("second")) {
+        second.classList.remove("second");
+        second.classList.add("first");
+      }
+      else if (second.classList.contains("first")) {
+        second.classList.remove("first");
+        second.classList.add("fifth");
+      }
+      else if (second.classList.contains("fifth")) {
+        second.classList.remove("fifth");
+        second.classList.add("fourth");
+      }
+      else if (second.classList.contains("fourth")) {
+        second.classList.remove("fourth");
+        second.classList.add("third");
+      }
+      else if (second.classList.contains("third")) {
+        second.classList.remove("third");
+        second.classList.add("second");
+
+        document.getElementById("first-info").style.display = "none";
+        document.getElementById("second-info").style.display = "block";
+        document.getElementById("third-info").style.display = "none";
+        document.getElementById("fourth-info").style.display = "none";
+        document.getElementById("fifth-info").style.display = "none";
+      }
+
+
+      if (third.classList.contains("third")) {
+        third.classList.remove("third");
+        third.classList.add("second");
+        document.getElementById("first-info").style.display = "none";
+        document.getElementById("second-info").style.display = "none";
+        document.getElementById("third-info").style.display = "block";
+        document.getElementById("fourth-info").style.display = "none";
+        document.getElementById("fifth-info").style.display = "none";
+      }
+      else if (third.classList.contains("second")) {
+        third.classList.remove("second");
+        third.classList.add("first");
+      }
+      else if (third.classList.contains("first")) {
+        third.classList.remove("first");
+        third.classList.add("fifth");
+      }
+      else if (third.classList.contains("fifth")) {
+        third.classList.remove("fifth");
+        third.classList.add("fourth");
+      }
+      else if (third.classList.contains("fourth")) {
+        third.classList.remove("fourth");
+        third.classList.add("third");
+      }
+
+
+
+
+      if (fourth.classList.contains("fourth")) {
+        fourth.classList.remove("fourth");
+        fourth.classList.add("third");
+      }
+      else if (fourth.classList.contains("third")) {
+        fourth.classList.remove("third");
+        fourth.classList.add("second");
+        document.getElementById("first-info").style.display = "none";
+        document.getElementById("second-info").style.display = "none";
+        document.getElementById("third-info").style.display = "none";
+        document.getElementById("fourth-info").style.display = "block";
+        document.getElementById("fifth-info").style.display = "none";
+      }
+      else if (fourth.classList.contains("second")) {
+        fourth.classList.remove("second");
+        fourth.classList.add("first");
+      }
+      else if (fourth.classList.contains("first")) {
+        fourth.classList.remove("first");
+        fourth.classList.add("fifth");
+      }
+      else if (fourth.classList.contains("fifth")) {
+        fourth.classList.remove("fifth");
+        fourth.classList.add("fourth");
+      }
+
+
+
+
+      if (fifth.classList.contains("fifth")) {
+        fifth.classList.remove("fifth");
+        fifth.classList.add("fourth");
+      }
+      else if (fifth.classList.contains("fourth")) {
+        fifth.classList.remove("fourth");
+        fifth.classList.add("third");
+      }
+      else if (fifth.classList.contains("third")) {
+        fifth.classList.remove("third");
+        fifth.classList.add("second");
+        document.getElementById("first-info").style.display = "none";
+        document.getElementById("second-info").style.display = "none";
+        document.getElementById("third-info").style.display = "none";
+        document.getElementById("fourth-info").style.display = "none";
+        document.getElementById("fifth-info").style.display = "block";
+      }
+      else if (fifth.classList.contains("second")) {
+        fifth.classList.remove("second");
+        fifth.classList.add("first");
+      }
+      else if (fifth.classList.contains("first")) {
+        fifth.classList.remove("first");
+        fifth.classList.add("fifth");
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function prev() {
+      var first = document.getElementById("first");
+      var second = document.getElementById("second");
+      var third = document.getElementById("third");
+      var fourth = document.getElementById("fourth");
+      var fifth = document.getElementById("fifth");
+
+      if (first.classList.contains("first")) {
+        first.classList.remove("first");
+        first.classList.add("second");
+        document.getElementById("first-info").style.display = "block";
+        document.getElementById("second-info").style.display = "none";
+        document.getElementById("third-info").style.display = "none";
+        document.getElementById("fourth-info").style.display = "none";
+        document.getElementById("fifth-info").style.display = "none";
+      }
+      else if (first.classList.contains("second")) {
+        first.classList.remove("second");
+        first.classList.add("third");
+      }
+      else if (first.classList.contains("third")) {
+        first.classList.remove("third");
+        first.classList.add("fourth");
+      }
+      else if (first.classList.contains("fourth")) {
+        first.classList.remove("fourth");
+        first.classList.add("fifth");
+      }
+      else if (first.classList.contains("fifth")) {
+        first.classList.remove("fifth");
+        first.classList.add("first");
+      }
+
+
+      if (second.classList.contains("second")) {
+        second.classList.remove("second");
+        second.classList.add("third");
+      }
+      else if (second.classList.contains("third")) {
+        second.classList.remove("third");
+        second.classList.add("fourth");
+      }
+      else if (second.classList.contains("fourth")) {
+        second.classList.remove("fourth");
+        second.classList.add("fifth");
+      }
+      else if (second.classList.contains("fifth")) {
+        second.classList.remove("fifth");
+        second.classList.add("first");
+      }
+      else if (second.classList.contains("first")) {
+        second.classList.remove("first");
+        second.classList.add("second");
+        document.getElementById("first-info").style.display = "none";
+        document.getElementById("second-info").style.display = "block";
+        document.getElementById("third-info").style.display = "none";
+        document.getElementById("fourth-info").style.display = "none";
+        document.getElementById("fifth-info").style.display = "none";
+      }
+
+
+      if (third.classList.contains("third")) {
+        third.classList.remove("third");
+        third.classList.add("fourth");
+      }
+      else if (third.classList.contains("fourth")) {
+        third.classList.remove("fourth");
+        third.classList.add("fifth");
+      }
+      else if (third.classList.contains("fifth")) {
+        third.classList.remove("fifth");
+        third.classList.add("first");
+      }
+      else if (third.classList.contains("first")) {
+        third.classList.remove("first");
+        third.classList.add("second");
+        document.getElementById("first-info").style.display = "none";
+        document.getElementById("second-info").style.display = "none";
+        document.getElementById("third-info").style.display = "block";
+        document.getElementById("fourth-info").style.display = "none";
+        document.getElementById("fifth-info").style.display = "none";
+      }
+      else if (third.classList.contains("second")) {
+        third.classList.remove("second");
+        third.classList.add("third");
+      }
+
+
+
+
+      if (fourth.classList.contains("fourth")) {
+        fourth.classList.remove("fourth");
+        fourth.classList.add("fifth");
+      }
+      else if (fourth.classList.contains("fifth")) {
+        fourth.classList.remove("fifth");
+        fourth.classList.add("first");
+      }
+      else if (fourth.classList.contains("first")) {
+        fourth.classList.remove("first");
+        fourth.classList.add("second");
+        document.getElementById("first-info").style.display = "none";
+        document.getElementById("second-info").style.display = "none";
+        document.getElementById("third-info").style.display = "none";
+        document.getElementById("fourth-info").style.display = "block";
+        document.getElementById("fifth-info").style.display = "none";
+      }
+      else if (fourth.classList.contains("second")) {
+        fourth.classList.remove("second");
+        fourth.classList.add("third");
+      }
+      else if (fourth.classList.contains("third")) {
+        fourth.classList.remove("third");
+        fourth.classList.add("fourth");
+      }
+
+
+
+
+      if (fifth.classList.contains("fifth")) {
+        fifth.classList.remove("fifth");
+        fifth.classList.add("first");
+      }
+      else if (fifth.classList.contains("first")) {
+        fifth.classList.remove("first");
+        fifth.classList.add("second");
+        document.getElementById("first-info").style.display = "none";
+        document.getElementById("second-info").style.display = "none";
+        document.getElementById("third-info").style.display = "none";
+        document.getElementById("fourth-info").style.display = "none";
+        document.getElementById("fifth-info").style.display = "block";
+      }
+      else if (fifth.classList.contains("second")) {
+        fifth.classList.remove("second");
+        fifth.classList.add("third");
+      }
+      else if (fifth.classList.contains("third")) {
+        fifth.classList.remove("third");
+        fifth.classList.add("fourth");
+      }
+      else if (fifth.classList.contains("fourth")) {
+        fifth.classList.remove("fourth");
+        fifth.classList.add("fifth");
+      }
+
+    }
+    var w = window.innerWidth;
+    console.log(w);
+    function second() {
+
+      var highlight = document.getElementsByClassName("second");
+
+      highlight[0].classList.add("highlight");
+
+      var thr=document.getElementsByClassName("third");
+     var frt = document.getElementsByClassName("fourth");
+     var fif =document.getElementsByClassName("fifth");
+     thr[0].style.display = "none";
+     frt[0].style.display = "none";
+     fif[0].style.display = "none";
+      var hide_con = document.getElementById("second-info");
+      document.getElementById("bokeh").style.transform = "translateX(-300px)";
+      hide_con.style.display = "none";
+      var hide = document.getElementsByClassName("hide-con2");
+      hide[0].style.display = "block";
+     document.getElementById("prev-btn").style.display="none";
+     document.getElementById("next-btn").style.display="none";
+     document.getElementById("goback-btn").style.display="flex";
+  
+    }
+    function first() {
+
+      var highlight = document.getElementsByClassName("second");
+      highlight[0].classList.add("highlight");
+      var thr=document.getElementsByClassName("third");
+     var frt = document.getElementsByClassName("fourth");
+     var fif =document.getElementsByClassName("fifth");
+     thr[0].style.display = "none";
+     frt[0].style.display = "none";
+     fif[0].style.display = "none";
+
+      var hide_con = document.getElementById("first-info");
+      document.getElementById("bokeh").style.transform = "translateX(-300px)";
+      hide_con.style.display = "none";
+      var hide = document.getElementsByClassName("hide-con1");
+      hide[0].style.display = "block";
+      document.getElementById("prev-btn").style.display="none";
+      document.getElementById("next-btn").style.display="none";
+      document.getElementById("goback-btn").style.display="flex";
+    }
+    function third() {
+      var highlight = document.getElementsByClassName("second");
+      highlight[0].classList.add("highlight");
+      var thr=document.getElementsByClassName("third");
+     var frt = document.getElementsByClassName("fourth");
+     var fif =document.getElementsByClassName("fifth");
+     thr[0].style.display = "none";
+     frt[0].style.display = "none";
+     fif[0].style.display = "none";
+      var hide_con = document.getElementById("third-info");
+      document.getElementById("bokeh").style.transform = "translateX(-300px)";
+      hide_con.style.display = "none";
+      var hide = document.getElementsByClassName("hide-con3");
+      hide[0].style.display = "block";
+      document.getElementById("prev-btn").style.display="none";
+      document.getElementById("next-btn").style.display="none";
+      document.getElementById("goback-btn").style.display="flex";
+    }
+    function fourth() {
+      var highlight = document.getElementsByClassName("second");
+      highlight[0].classList.add("highlight");
+      var thr=document.getElementsByClassName("third");
+     var frt = document.getElementsByClassName("fourth");
+     var fif =document.getElementsByClassName("fifth");
+     thr[0].style.display = "none";
+     frt[0].style.display = "none";
+     fif[0].style.display = "none";
+      var hide_con = document.getElementById("fourth-info");
+      document.getElementById("bokeh").style.transform = "translateX(-300px)";
+      hide_con.style.display = "none";
+      var hide = document.getElementsByClassName("hide-con4");
+      hide[0].style.display = "block";
+      document.getElementById("prev-btn").style.display="none";
+      document.getElementById("next-btn").style.display="none";
+      document.getElementById("goback-btn").style.display="flex";
+    }
+
+    function fifth() {
+      var highlight = document.getElementsByClassName("second");
+      highlight[0].classList.add("highlight");
+      var thr=document.getElementsByClassName("third");
+     var frt = document.getElementsByClassName("fourth");
+     var fif =document.getElementsByClassName("fifth");
+     thr[0].style.display = "none";
+     frt[0].style.display = "none";
+     fif[0].style.display = "none";
+     document.getElementById("prev-btn").style.display="none";
+     document.getElementById("next-btn").style.display="none";
+  
+      var hide_con = document.getElementById("fifth-info");
+      document.getElementById("bokeh").style.transform = "translateX(-300px)";
+      hide_con.style.display = "none";
+      var hide = document.getElementsByClassName("hide-con5");
+      hide[0].style.display = "block";
+      document.getElementById("prev-btn").style.display="none";
+      document.getElementById("next-btn").style.display="none";
+      document.getElementById("goback-btn").style.display="flex";
+    }
+    function goback()
+    {
+      var highlight = document.getElementsByClassName("second");
+      highlight[0].classList.remove("highlight");
+      var thr=document.getElementsByClassName("third");
+     var frt = document.getElementsByClassName("fourth");
+     var fif =document.getElementsByClassName("fifth");
+     thr[0].style.display = "block";
+     frt[0].style.display = "block";
+     fif[0].style.display = "block";
+     document.getElementById("prev-btn").style.display="block";
+     document.getElementById("next-btn").style.display="block";
+     document.getElementById("goback-btn").style.display="none";
+     var element_id = highlight[0].id;
+     if(element_id=="first")
+     {
+      var hide_con = document.getElementById("first-info");
+      document.getElementById("bokeh").style.transform = "translateX(0px)";
+      hide_con.style.display = "block";
+      var hide = document.getElementsByClassName("hide-con1");
+      hide[0].style.display = "none";
+     }
+      
+      if(element_id=="second")
+    {
+      var hide_con = document.getElementById("second-info");
+      document.getElementById("bokeh").style.transform = "translateX(0px)";
+      hide_con.style.display = "block";
+      var hide = document.getElementsByClassName("hide-con2");
+      hide[0].style.display = "none";
+  
+    }    
+    if(element_id=="third")
+    {
+      var hide_con = document.getElementById("third-info");
+      document.getElementById("bokeh").style.transform = "translateX(0px)";
+      hide_con.style.display = "block";
+      var hide = document.getElementsByClassName("hide-con3");
+      hide[0].style.display = "none";
+   
+    }  
+    if(element_id=="fourth")
+{
+
+  var hide_con = document.getElementById("fourth-info");
+      document.getElementById("bokeh").style.transform = "translateX(0px)";
+      hide_con.style.display = "block";
+      var hide = document.getElementsByClassName("hide-con4");
+      hide[0].style.display = "none";
+   
+}   
+
+if(element_id=="fifth")
+{
+  var hide_con = document.getElementById("fifth-info");
+      document.getElementById("bokeh").style.transform = "translateX(0px)";
+      hide_con.style.display = "block";
+      var hide = document.getElementsByClassName("hide-con5");
+      hide[0].style.display = "none";
+    
+}
+    }
+   
+
+    
+ 
+
+
+  </script>
+
+</body>
+
+</html>

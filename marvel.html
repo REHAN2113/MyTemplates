@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap JavaScript (with Popper.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+body{
+  background-color: rgb(225, 225, 225);
+}
+.grid-items img:hover{
+  transform: translateY(-15px);
+  transition-duration: 0.5s;
+}
+.box img:hover{
+  transform: translateY(-15px);
+  transition-duration: 0.5s;
+}
+.news-header img:hover{
+  transform:scale(1.1);
+  transition-duration: 0.5s;
+  
+
+}
+.songs:hover{
+  background-color: rgb(192, 192, 192);
+  transition-duration: 0.2s;
+}
+
+.news-header {
+  overflow: hidden;
+}
+    header{
+      height: fit-content;
+      background-color: rgb(37, 37, 37);
+
+    }
+    header  div{
+      width: 80%;
+    
+      height: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .h-top{
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      color: white;
+    
+    }
+    .h-t-left{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      
+
+    }
+   
+.h-t-right{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  font-size: 12px;
+  width: 20%;
+  padding: 8px;
+}
+nav{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100%;
+
+}
+
+ul{
+ justify-content: center;
+ align-items: center;
+margin-top: 7px;
+
+
+}
+ul li{
+  list-style: none;
+  padding: 0px 24px 0px 24px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.h-bottom{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  background-color: black;
+  height: 40px;
+  align-items: center;
+}
+.h-bottom img{
+  filter: invert(100%);
+  margin-left: 10px;
+
+}
+main{
+  height: 55vh;
+  width: 100%;
+
+  background-image: url("public/images/marevl-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  
+}
+  
+.shade{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-2{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-sec{
+  width: 80%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+  gap: 20px;
+  padding: 30px;
+  position: relative;
+  top: -30px;
+  background-color: white;
+}
+.grid-items{
+
+}
+.card-header img{
+  box-shadow: 0px 10px 20px rgb(191, 190, 190);
+}
+.card-body{
+  font-size: 14px;
+  padding: 10px 2px 0px 10px;
+  font-weight: bold;
+}
+.card-footer{
+  color: gray;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 0px 10px 10px;
+}
+.container-3{
+  height: 66vh;
+  width: 100%;
+  background-image: url("public/images/Avengers\ Age\ Of\ Ultron\ Wallpaper\ HD.jpg");
+
+  background-size: cover;
+}
+.shade-2{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  padding-left: 100px;
+
+}
+.box-2{
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+.box-3{
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+.box-4 button{
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.container-4{
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.latest-con{
+  width: 80%;
+
+  height: 80%;
+}
+.news-grid{
+  padding: 20px 0px 0px 0px;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  gap: 10px;
+}
+.movies-grid{
+
+}
+.news-header {
+
+  height: 170px;
+
+}
+.news-body{
+  font-weight: bold;
+  color: gray;
+  font-size: 16px;
+  padding: 6px 0px 2px 2px;
+}
+.news-footer{
+  font-weight: bold;
+ 
+  font-size: 15px;
+  padding: 0px 0px 0px 2px;
+}
+.news-header img{
+  object-fit: cover;
+}
+.container-5{
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movies-grid{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6,1fr);
+  gap: 14px;
+  padding-top: 30px;
+  height: fit-content;
+}
+.container-6{
+  height: 77vh;
+  width: 100%;
+margin: 30px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.music-con{
+  width: 80%;
+  height: fit-content;
+
+ 
+}
+.music-grid{
+  height: 100%;
+  width: 80%;
+  
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 10px;
+  padding: 20px;
+
+}
+.music-left,.music-right{
+
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+.music-left-top{
+  height: 45%;
+  background-color: rgb(248, 23, 23);
+
+
+}
+.music-top-grid{
+
+  height: 100%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  align-items: center;
+  gap: 30px;
+  margin: auto;
+  position: relative;
+}
+.small{
+  font-size: 12px;
+}
+.bi-spotify {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  font-size: 30px;
+ color: rgb(255, 255, 255);
+}
+.play-icons{
+text-align: end;
+display: inline;
+float: right;
+
+}
+.play-icons span{
+  padding-left:6px ;
+  padding-right: 6px;
+}
+
+
+.bi-skip-start-fill,.bi-skip-end-fill{
+  color: rgb(255, 255, 255);
+  opacity: 0.3;
+  font-size: 24px;
+}
+.bi-three-dots{
+  color: rgb(135, 131, 131);
+  font-size: 20px;
+  
+}
+.dots{
+  width: 30px;
+  height: 30px;
+ color: red;
+ background-color: rgb(254, 237, 237);
+  text-align: center;
+border-radius: 30px;
+}
+.bi-play-circle-fill{
+  font-size: 40px;
+  color: white;
+}
+.music-mid-left{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(212, 0, 0);
+}
+.playlist-grid{
+  display: grid;
+  grid-template-columns: 1fr 9fr 2fr;
+  width: 100%;
+  height: 100%;
+
+}
+.playlist-grid div{
+
+}
+.count{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  
+}
+.count div{
+  text-align: center;
+  padding: 11px 0px 11px 0px;
+}
+.artist{
+  font-size: 10px;
+  color: gainsboro;
+  font-weight: bold;
+}
+.song{
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  
+}
+.time{
+  padding: 11px;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(206, 203, 203);
+}
+.music-right{
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+
+}
+.music-r-left{
+background-color: rgb(243, 243, 243);
+padding: 14px;
+}
+.music-right div{
+
+}
+.btn-play{
+  margin-top: 60px;
+ 
+}
+.btn-play span{
+  font-weight: bold;
+  font-size: 18px;
+}
+.music-r-right{
+  
+  background-color: rgb(229, 229, 229);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+
+}
+.song-con{
+  height: 80%;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.signin{
+
+  text-align: end;
+}
+.songs{
+  display: flex;
+
+  
+}
+.song-nm{
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2px;
+}
+.song-artist{
+  font-size: 12px;
+  color:gray;
+  padding: 2px;
+}
+.view{
+  color: red;
+  font-weight: bold;
+  font-size: 17px;
+}
+.song-footer-msg{
+  font-size: 12px;
+  color: gray;
+  position: absolute;
+ right: 16px;
+ bottom:10px;
+}
+.container-7
+{
+  height: 50vh;
+  width: 100%;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+background-color: black;
+}
+.con-7-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.con7-r-sub-con{
+  height: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.insider-title{
+  color: red;
+  font-weight: 500;
+  font-size: 20px;
+}
+.offer{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.para{
+  color: white;
+  font-size: 16px;
+}
+.join-btn{
+  color: white;
+  background-color: rgb(255, 38, 0);
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.terms{
+  color: white;
+  font-size: 12px;
+}
+.con-7-left{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+footer{
+  width: 100%;
+  height: 55vh;
+
+  background-color: rgb(24, 24, 24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ position: relative;
+}
+.footer-grid{
+
+  height: 50%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+}
+.footer-left-grid{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 5fr 4fr;
+  color: white;
+  font-weight: 500;
+}
+.footer-right-grid{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 5fr 5fr;
+  color: white;
+  font-weight: 500;
+}
+
+
+
+.end-footer{
+ 
+  color: white;
+ 
+ position: absolute;
+ bottom: 30px;
+} 
+.end-footer span{
+  padding: 0px 6px 0px 6px;
+  color: gray;
+  font-size: 12px;
+ 
+}
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="h-top">
+         <div class="h-t-left w-25 fw-bold ">
+          <span class="mx-2">LOG IN</span>|
+          <span class="mx-2">JOIN</span>
+         </div>
+         <div class="h-t-mid" style="text-align:center;">
+          <img src="public/images/marvel-logo.png" alt="" width="140px" >
+         </div>
+         <div class="h-t-right ">
+          <img src="public/images/u.png" alt=""width="20px"class="me-2">
+          <span class="fw-bold " style="text-align: center;">MARVEL UNLIMITED SUBSCRIBE </span>
+          <span class="bi bi-search fs-4 ms-2 " ></span>
+         </div>
+    </div>
+    <div class="h-mid">
+      <nav class="bg-dark">
+<ul class="d-flex text-light">
+  <li>NEWS</li>
+  <li>COMICS</li>
+  <li>CHARACTERS</li>
+  <li>MOVIES</li>
+  <li>TV SHOWS</li>
+  <li>GAMES</li>
+  <li>VIDEOS</li>
+  <li>MORE</li>
+</ul>
+      </nav>
+    </div>
+    <div class="h-bottom">
+      <span>STREAM X-MEN '97 EXCLUSIVELY ON</span>
+      <img src="public/images/disney.png" alt=""width="60px">
+    </div>
+  </header>
+<main>
+<div class="shade">
+<div class="m-title">
+  <span class="fw-bold fs-1">
+    MOVIES
+  </span>
+</div>
+<div class="m-para">
+  <span class="fs-6">Journey into the cosmic depths of the mighty Marvel Cinematic Universe!</span>
+</div>
+</div>
+</main>
+<div class="container-2">
+<div class="grid-sec">
+  <div class="grid-items">
+
+    <div class="card-header">
+      <img src="public/images/cpt.jpg" alt="" width="100%">
+    </div>
+    <div class="card-body">
+      <span class="fw-bold">Captain America: Brave New World Movie </span>
+    </div>
+    <div class="card-footer">
+      <span>FEB 14, 2025</span>
+    </div>
+  </div>
+  <div class="grid-items">
+
+    <div class="card-header">
+      <img src="public/images/deadpool.jpg" alt="" width="100%">
+    </div>
+    <div class="card-body">
+      <span class="fw-bold">Deadpool & Wolverine </span>
+    </div>
+    <div class="card-footer">
+      <span>2024</span>
+    </div>
+  </div>
+  <div class="grid-items">
+
+    <div class="card-header">
+      <img src="public/images/the-marvel.jpg" alt="" width="100%">
+    </div>
+    <div class="card-body">
+      <span class="fw-bold">The Marvels</span>
+    </div>
+    <div class="card-footer">
+      <span>2023</span>
+    </div>
+  </div>
+  <div class="grid-items">
+
+    <div class="card-header">
+      <img src="public/images/gardian-glx.jpg" alt="" width="100%">
+    </div>
+    <div class="card-body">
+      <span class="fw-bold">Guardians of the Galaxy Vol. 3</span>
+    </div>
+    <div class="card-footer">
+      <span>2023</span>
+    </div>
+  </div>
+  <div class="grid-items">
+
+    <div class="card-header">
+      <img src="public/images/antman.jpg" alt="" width="100%">
+    </div>
+    <div class="card-body">
+      <span class="fw-bold"> Ant-Man and The Wasp: Quantumania
+        </span>
+    </div>
+    <div class="card-footer">
+      <span>2023</span>
+    </div>
+  </div>
+  <div class="grid-items">
+
+    <div class="card-header">
+      <img src="public/images/blackpanther.jpg" alt="" width="100%">
+    </div>
+    <div class="card-body">
+      <span class="fw-bold"> Black Panther: Wakanda Forever 
+
+        </span>
+    </div>
+    <div class="card-footer">
+      <span>2022</span>
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="container-3">
+  <div class="shade-2">
+  <div class="box-1"> <img src="public/images/disneyplus.png" alt="" width="200px"></div>
+  <div class="box-2">
+    <span>A UNIVERSE OF SUPER HEROES</span>
+  </div>
+  <div class="box-3">
+    <span>All Your Favourite Stories and More. Start Streaming Now.</span>
+  </div>
+  <div class="box-4">
+    <button class="btn btn-danger ">STREAM NOW</button>
+  </div>
+  </div>
+</div>
+<div class="container-4">
+  <div class="latest-con">
+ <div><span class="fw-bold fs-2">LATEST MOVIES NEWS</span></div>
+ <div class="news-grid">
+<div class="news-items">
+  <div class="news-header">
+    <img src="public/images/news-1.jpg" alt=""width="100%" height="100%">
+  </div>
+  <div class="news-body">
+    <span>CULTURE & LIFESTYLE</span>
+  </div>
+  <div class="news-footer">
+    <span>Look Inside 'Marvel Studios' The Infinity Saga - Iron Man 3: The Art of the Movie'</span>
+  </div>
+</div>
+<div class="news-items">
+  <div class="news-header">
+    <img src="public/images/news-2.jpg" alt=""width="100%" height="100%">
+  </div>
+  <div class="news-body">
+    <span>CULTURE & LIFESTYLE</span>
+  </div>
+  <div class="news-footer">
+    <span>Get tickets to Marvel Studios’ Infinity Saga Concert Experience at the Hollywood Bowl</span>
+  </div>
+</div>
+<div class="news-items">
+  <div class="news-header">
+    <img src="public/images/news-3.jpg" alt=""width="100%" height="100%">
+  </div>
+  <div class="news-body">
+    <span>CULTURE & LIFESTYLE</span>
+  </div>
+  <div class="news-footer">
+    <span>'Captain America: Brave New World: A Hero Looks Like You' Picture Book Inspires Young Readers</span>
+  </div>
+</div>
+<div class="news-items">
+  <div class="news-header">
+    <img src="public/images/news-4.jpg" alt=""width="100%" height="100%">
+  </div>
+  <div class="news-body">
+    <span>LIVE EVENTS</span>
+  </div>
+  <div class="news-footer">
+    <span>All the Marvel News from D23 2024</span>
+  </div>
+</div>
+ </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container-5">
+  <div class="latest-con">
+ <div><span class="fw-bold fs-2">MARVEL MOVIES </span></div>
+ <div class="movies-grid">
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-1.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Avengers: Secret Wars
+</span>
+            </div>
+            <div class="card-footer">
+<span>MAY 7, 2027</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-2.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Avengers: Doomsday
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> MAY 1, 2026</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-3.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Blade
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>NOV 7, 2025</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-4.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Fantastic Four
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> JUL 25, 2025</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-5.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Thunderbolts
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   MAY 2, 2025</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-6.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Captain America: Brave New World
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   FEB 14, 2025</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-7.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Deadpool & Wolverine
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2024</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-8.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  The Marvels
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2023</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-9.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Guardians of the Galaxy Vol. 3
+
+  
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2023</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-10.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Ant-Man and The Wasp: Quantumania
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2023</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-11.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Black Panther: Wakanda Forever
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2022</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-12.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Thor: Love and Thunder
+
+ 
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2022</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-13.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Doctor Strange in the Multiverse of Madness
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2022</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-14.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Spider-Man: No Way Home
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>  2021</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-15.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Eternals
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2021</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-header">
+              <img src="public/images/box-16.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Shang-Chi and The Legend of The Ten Rings
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2021</span>
+            </div>
+          </div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-17.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Black Widow
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2021</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-18.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Spider-Man: Far From Home
+
+  
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2019</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-19.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Avengers: Endgame
+
+ 
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>  2019</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-20.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Captain Marvel
+
+ 
+
+
+
+ 
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>    2019</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-21.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Ant-Man and The Wasp
+
+ 
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2018</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-22.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Avengers: Infinity War
+
+  
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2018</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-23.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Black Panther
+
+ 
+
+  
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>2018</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-24.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+
+
+  Thor: Ragnarok
+
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2017</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-25.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Spider-Man: Homecoming
+
+  
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2017</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-26.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Guardians of the Galaxy Vol. 2
+
+  2017
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> MAY 1, 2026</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-27.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Doctor Strange
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2016</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-28.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Captain America: Civil War
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2016</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-29.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Ant-Man
+
+  
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2015</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-30.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Avengers: Age of Ultron
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>  2015</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-31.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Guardians of the Galaxy
+
+  
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2014</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-32.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Captain America: The Winter Soldier
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>   2014</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-33.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Thor: The Dark World
+
+ 
+
+
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span> 2013</span>
+            </div></div>
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-34.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Iron Man 3
+
+ 
+
+ 
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>  2013</span>
+            </div></div>
+            <div class="box">     <div class="card-header">
+              <img src="public/images/box-35.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  The Avengers
+
+ 
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>  2012</span>
+            </div></div>
+          
+          <div class="box">     <div class="card-header">
+              <img src="public/images/box-36.jpg" alt=""width="100%">
+            </div>
+            <div class="card-body">
+<span>
+  Captain America: The First Avenger
+
+
+
+ 
+
+ 
+</span>
+            </div>
+            <div class="card-footer">
+<span>    2011</span>
+            </div></div>
+ </div>
+  </div>
+</div>
+<div class="container-6">
+<div class="music-con">
+<span class="fw-bold fs-2">
+  MARVEL MUSIC PLAYLIST
+</span>
+</div>
+<div class="music-grid">
+<div class="music-left">
+
+  <div class="music-left-top">
+    <div class="music-top-grid">
+      <div>
+        <img src="public/images/music.png" alt="" width="150px" class="rounded rounded-4">
+       </div>
+ <div >
+  <div class="my-2"><span class="fw-bold fs-4 text-light ">Marvel Music</span></div>
+  <div><span class="bg-light rounded rounded-1 p-1 me-2  small">Preview </span><span class="text-light">Marvel Music</span> </div>
+  <div  class="my-2  d-flex  " style="align-items: center ;"><span class="bi bi-plus-circle me-2 text-light fs-3 "></span><span class="fs-6 text-light ">Save On Spotify</span> </div>
+   <div class=" play-icons"><span class="bi bi-skip-start-fill"></span><span class="bi bi-skip-end-fill"></span><span class="bi bi-three-dots"></span> <span class="bi bi-play-circle-fill"></span></div>
+ </div>
+      <span class="bi bi-spotify "></span>
+    </div>
+     
+    
+    
+
+
+  </div>
+  <div class="music-mid-left">
+    <div class="playlist-grid">
+      <div class="count">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+      <div class="song-names p-2">
+        <div  class="song"><span>Portals</span></div>
+        <div><span class="artist">Alen Silvestri</span></div>
+        <div  class="song"><span>Marvel Studios Fanfare</span></div>
+        <div><span class="artist">Brian Tyler</span></div>
+        <div  class="song"><span>The Avengers</span></div>
+        <div><span class="artist">Alen Silvestri</span></div>
+        <div  class="song"><span>Let's Go (Stereo Version)</span></div>
+        <div><span class="artist">The Routers</span></div>
+        <div  class="song"><span>Supersonic Rocket Ship</span></div>
+        <div><span class="artist">Alen Silvestri</span></div>
+      </div>
+      <div class="time">
+             <div ><span>03:17</span></div>
+             <div class="py-3"><span>03:17</span></div>
+             <div class="py-2"><span>03:17</span></div>
+             <div class="py-3"><span>03:17</span></div>
+             <div class="py-2"><span>03:17</span></div>
+
+      </div>
+     </div>
+  </div>
+</div>
+<div class="music-right">
+<div class="music-r-left">
+    <div class=" ps-1 mb-3"><span class="bi bi-apple">Music</span></div>
+    <div style="text-align: center;" class="mb-3">
+      <img src="public/images/music-2.webp" alt="" width="200px" class="rounded rounded-3">
+    </div>
+    <div>
+      <div class="d-flex justify-content-between">
+        <span>Marvel Music</span> <span class="bi bi-three-dots dots"></span>
+      </div>
+      <span>Disney</span>
+    </div>
+    <div class="btn-play"><button class="btn btn-danger w-100"> <span class="bi bi-play-fill ">PLAY</span></button></div>
+</div>
+<div class="music-r-right">
+ <div  class="px-4 py-2 signin w-100"><span class="fw-bold ">sign in</span></div>
+ <div class="song-con">
+ <div class="songs" >
+ <div class="song-img me-2">
+          <img src="public/images/box-1.jpg" alt="" width="50px" height="50px">
+ </div>
+ <div >
+  <div class="song-nm"><span>Deadpool Theme Song</span></div>
+  <div class="song-artist"><span>Rob Simonsen</span></div>
+ </div>
+ </div>
+ <div class="songs">
+ <div class="song-img me-2">
+          <img src="public/images/deadpool.jpg" alt="" width="50px" height="50px">
+ </div>
+ <div>
+  <div class="song-nm"><span>LFG Theme From Deadpool</span></div>
+  <div class="song-artist"><span>Rob Simonsen</span></div>
+ </div>
+ </div>
+ <div class="songs">
+ <div class="song-img me-2">
+          <img src="public/images/box-20.jpg" alt="" width="50px"  height="50px">
+ </div>
+ <div>
+  <div class="song-nm"><span>The Marvels</span></div>
+  <div class="song-artist"><span>Rob Simonsen</span></div>
+ </div>
+ </div>
+ <div class="songs">
+ <div class="song-img me-2">
+          <img src="public/images/box-19.jpg" alt="" width="50px" height="50px">
+ </div>
+ <div>
+  <div class="song-nm"><span>Age of Ultron</span></div>
+  <div class="song-artist"><span>Rob Simonsen</span></div>
+ </div>
+ </div>
+ <div class="songs" style="opacity: 0.4;">
+ <div class="song-img me-2">
+          <img src="public/images/box-16.jpg" alt="" width="50px"  height="50px">
+ </div>
+ <div>
+  <div class="song-nm"><span>Shang chi</span></div>
+  <div class="song-artist"><span>Rob Simonsen</span></div>
+ </div>
+ </div>
+ <div class="view"><span>View in Apple Music</span> <span class="bi bi-arrow-up-right "></span></div>
+ </div>
+ <div class="song-footer-msg"><span>see how your data is managed...</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-7">
+ <div class=" con-7-left">
+  <img src="public/images/footer-marvel-img.webp" alt=""width="76%" height="100%">
+ </div>
+ <div class=" con-7-right">
+  <div class="con7-r-sub-con">
+  <div class="insider-title"><span>MARVEL INSIDER</span></div>
+  <div class="offer"><span>WATCH, EARN, REDEEM!</span></div>
+  <div class="para"><span>Get Rewarded for doing what you already do as a fan.</span></div>
+  <div ><span class="join-btn">JOIN NOW</span></div>
+  <div class="terms"> <span>Terms and conditions apply</span></div>
+ </div>
+</div>
+</div>
+<footer>
+  <div class="footer-grid">
+     <div class="footer-left-grid">
+       <div>
+        <img src="public/images/m-logo.png" alt="" width="66%"height="70%">
+       </div>
+       <div>
+         <div class="py-1">About Marvel</div>
+         <div class="py-1"> Help/FAQs</div>
+         <div class="py-1">  Careers</div>
+         <div class="py-1">  Internships</div>
+       </div>
+       <div>
+        <div class="py-1">     Advertising</div>
+        <div class="py-1">     Disney+</div>
+        <div class="py-1">  
+          Marvelhq.com</div>
+        <div class="py-1"> 
+          Redeem Digital Comics</div>
+       </div>
+     </div>
+
+
+    
+    
+    
+
+     <div class="footer-right-grid">
+      <div>
+
+        <div class="py-2"><img src="public/images/marvel-insider.png" alt="" width="60px"></div>
+        <div class="py-4">
+          <img src="public/images/u-m.png" alt=""width="60px">
+        </div>
+      </div>
+      <div>
+        <div>
+          MARVEL INSIDER
+        </div>
+        <div class="small">
+          Get Rewarded For Being a Marvel Fan
+        </div>
+        <div class="mt-3">
+          MARVEL UNLIMITED
+        </div>
+        <div class="small">
+          Access Over 30,000+ Comics
+        </div>
+      </div>
+      <div>
+        <div class="fw-bold ps-3">
+          FOLLOW MARVEL
+        </div>
+        <div class="my-3"><span class="bi bi-facebook px-3"></span><span class="bi bi-twitter-x px-3"></span> <span class="bi bi-instagram px-3"></span> <span class="bi bi-tiktok px-3"></span></div>
+        <div><span class="bi bi-youtube px-3"></span><span class="bi bi-snapchat px-3"></span> <span class="bi bi-pinterest px-3"></span> <span class="bi bi-chat px-3"></span></div>
+      </div>
+     </div>
+  </div>
+  <div class="end-footer">
+    <span> Terms of Use</span>
+
+<span>Privacy Policy</span>
+
+   <span>Addendum to the Global Privacy Policy</span><span>Interest-Based Ads</span><span>License Agreement</span><span>©2024 MARVEL</span>
+
+
+
+
+
+  </div>
+</footer>
+</body>
+</html>

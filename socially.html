@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socially</title>
+    <style>
+        body {
+            background-image: url("public/images/back-image.png");
+            background-size: cover;
+
+            background-repeat: no-repeat;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .logo img {
+            width: 140px;
+            height: 40px;
+            background-size: contain;
+        }
+
+        div span {
+            padding-left: 14px;
+            padding-right: 14px;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .Socially {
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .btn {
+            background-image: linear-gradient(45deg, rgb(225, 57, 244), rgb(236, 87, 206), rgb(244, 137, 228));
+            padding: 10px;
+            padding-left: 44px;
+            padding-right: 44px;
+            border-radius: 30px;
+            border-top-right-radius: 0px;
+            color: white;
+
+
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            height: 600px;
+            
+        }
+       
+        .left-panel span{
+            display: block;
+            
+        }
+        .heading{
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 150px;
+            padding-left: 150px;
+            margin-bottom: 20px;
+
+
+        }
+        .para{
+            padding-left: 150px;
+            margin-bottom: 20px;
+           
+        }
+        .join-now{
+            width: 100px;
+            margin-left: 140px;
+           
+        }
+       
+        .join-now:hover{
+            border-top-right-radius: 30px;
+            transition: 0.5s;
+           
+        }
+        .btn:hover{
+            border-top-right-radius: 30px;
+            transition: 0.5s;
+        }
+        .right-panel img{
+             width: 500px;
+             height: 580px;
+             padding-top: 40px;
+           
+           
+        }
+        .anim{
+             opacity: 0;
+             transform: translateX(200px);
+             animation: moveup 1s forwards;
+
+        }
+        @keyframes moveup {
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            
+        }
+        .anim1{
+             opacity: 0;
+             transform: translateX(-200px);
+             animation: moveup 1s forwards;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="public/images/logo.png" alt="">
+        </div>
+        <div>
+            <span>Features</span>
+            <span>How it Works</span>
+            <span>Privacy</span>
+        </div>
+        <div>
+            <span>Login</span>
+            <span class="btn">Download</span>
+        </div>
+    </header>
+    <section>
+        <main>
+            <div class="left-panel">
+                <span class="heading anim1">
+                    Make<br>
+                    New Friends.
+                </span>
+
+                <span class="para anim1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat quis perferendis blanditiis vel
+                    quos, tenetur.
+                </span>
+
+                <span class="btn join-now anim1">Join Now </span>
+            </div>
+            <div class="right-panel">
+
+               <img src="public/images/pic.png " class="anim" alt="">
+
+            </div>
+        </main>
+    </section>
+</body>
+
+</html>
